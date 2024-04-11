@@ -1,0 +1,52 @@
+@import 'src/styles/global/vars';
+
+.benefits {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 48px;
+
+  @media only screen and (max-width: $bp-sm){
+    margin-top: 32px; 
+  }
+
+  &__item {
+    width: 25%;
+    position: relative;
+    padding: 20px;
+    text-align: center;
+
+    @media only screen and (max-width: $bp-md){
+      width: 50%; 
+      padding: 40px 20px;
+    }
+
+    @media only screen and (max-width: $bp-sm){
+      padding: 20px 10px; 
+    }
+
+    &:first-child {
+      border-left: none;
+    }
+
+  }
+
+  &__icon {
+    width: 60px;
+    height: 60px;
+
+    @media only screen and (max-width: $bp-sm){
+      width: 40px;
+      height: 40px; 
+    }
+  }
+
+  &__desc {
+    margin-top: 12px;
+    font-size: 18px;
+    @media only screen and (max-width: $bp-sm){
+      font-size: 16px; 
+    }
+  }
+}

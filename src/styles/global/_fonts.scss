@@ -1,0 +1,14 @@
+@import '../mixins/fonts.scss';
+
+// Пример подключения:
+@include fonts("Inter", "Inter-Light", 300);
+@include fonts("Inter", "Inter-Regular", 400);
+@include fonts("Inter", "Inter-Medium", 500);
+@include fonts("Inter", "Inter-SemiBold", 600);
+@include fonts("Inter", "Inter-Bold", 700);
+
+@include fonts("RobotoCondensed", "RobotoCondensed-Light", 300);
+@include fonts("RobotoCondensed", "RobotoCondensed-Regular", 400);
+@include fonts("RobotoCondensed", "RobotoCondensed-Medium", 500);
+@include fonts("RobotoCondensed", "RobotoCondensed-SemiBold", 600);
+@include fonts("RobotoCondensed", "RobotoCondensed-Bold", 700);

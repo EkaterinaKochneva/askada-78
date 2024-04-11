@@ -1,0 +1,61 @@
+@import 'src/styles/global/vars';
+.input {
+  display: block;
+  position: relative;
+  margin-bottom: 16px;
+
+  &__native {
+    width: 100%;
+    border: 1px solid $dark-grey;
+    background-color: $main-white;
+    font-size: 16px;
+    padding: 14px;
+    transition: all .2s ease-in-out;
+
+    &::placeholder{
+        color: transparent;
+    }
+
+    &:focus {
+      outline: none;
+      border-color: $main-dark-color;
+    }
+
+    &:focus ~ .input__label {
+      transform: translateY(-31px);
+      color: $main-dark-color;
+    }
+
+  }
+
+  &__label {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 12px;
+    z-index: 1;
+    display: block;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.4;
+    text-transform: uppercase;
+    color: $secondary-text-color;
+    background: $main-white;
+    padding: 0 2px;
+    transition: all .3s ease-in-out;
+  }
+
+  &__status {
+    font-size: 12px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
+
+  textarea{
+    display: block;
+    resize: none;
+    height: 100px;
+
+  }
+}

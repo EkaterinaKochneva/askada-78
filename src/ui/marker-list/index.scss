@@ -1,0 +1,31 @@
+@import 'src/styles/global/vars';
+
+.marker-list {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  li {
+    position: relative;
+    padding-left: 24px;
+    margin-bottom: 8px;
+
+    &::before {
+      content: '';
+      display: block;
+      width: 14px;
+      height: 7px;
+      border-bottom: 2px solid $accent-color;
+      border-left: 2px solid $accent-color;
+      position: absolute;
+      top: 6px;
+      left: 3px;
+      z-index: 1;
+      transform: rotate(-45deg);
+    }
+  }
+}

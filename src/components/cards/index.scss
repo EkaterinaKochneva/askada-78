@@ -1,0 +1,59 @@
+@import 'src/styles/global/vars';
+
+.cards {
+  margin-top: 80px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+
+  @media only screen and (max-width: $bp-lg){
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media only screen and (max-width: $bp-sm){
+    grid-template-columns: 1fr; 
+  }
+
+
+  &__item {
+    position: relative;
+    padding: 16px;
+    border: 1px solid $dark-grey;
+    flex-direction: column;
+  }
+
+  &__icon {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: 60px;
+    height: 60px;
+    background-color: $accent-color;
+    color: $main-white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media only screen and (max-width: $bp-sm){
+      left: -10px; 
+    }
+
+    svg {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  &__title {
+    font-size: 18px;
+    font-weight: 600;
+    text-align: end;
+    margin-bottom: 16px;
+    padding-left: 30px;
+  }
+
+  &__desc {
+    text-align: center;
+    color: $secondary-text-color;
+  }
+}

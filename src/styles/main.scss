@@ -1,0 +1,24 @@
+
+//Подключение базовых стилей
+@import "global/normalize.scss";
+@import "global/fonts.scss";
+@import "global/theme.scss";
+@import "global/typography.scss";
+
+//Подключение ui-компонентов
+@import "../ui/button/";
+@import "../ui/modal/";
+@import "../ui/input/";
+@import "../ui/section/";
+@import "../ui/img-block/";
+@import "../ui/marker-list/";
+@import "../ui/arrow-list/";
+
+
+//Подключение компонентов
+@import "../components/header/";
+@import "../components/logo/";
+@import "../components/hero/";
+@import "../components/benefits/";
+@import "../components/spheres/";
+@import "../components/cards/";

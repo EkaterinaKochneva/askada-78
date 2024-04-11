@@ -1,0 +1,31 @@
+mixin header(props = { class: [], attrs: {} })
+  -
+    let classes = ['header'];
+    let attrs = props.attrs ? props.attrs : {};
+
+    if (Array.isArray(props.class)) {
+      props.class.forEach((key) => {
+        classes.push(key);
+      })
+    }
+
+  header(class= classes)&attributes(attrs)
+    .container
+      .header__inner
+        a(href="/").logo.header__logo 
+          svg.icon-svg.logo__svg
+            use(xlink:href="assets/img/svg-sprite/sprite.svg#logo")
+          span.logo__text Аскада
+
+        .header__menu
+          nav.header__nav.top-menu
+            ul.top-menu__list
+              li.top-menu__item
+                a(href="#").top-menu__link О компании
+              li.top-menu__item
+                a(href="#").top-menu__link Преимущества
+              li.top-menu__item
+                a(href="#").top-menu__link Контакты
+        button.header__burger.burger
+          span Меню
+      

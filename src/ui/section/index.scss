@@ -1,0 +1,55 @@
+@import 'src/styles/global/vars';
+
+.section {
+  padding: 120px 0;
+
+  @media only screen and (max-width: $bp-md){
+    padding: 80px 0; 
+  }
+
+  @media only screen and (max-width: $bp-sm){
+    padding: 48px 0; 
+  }
+
+  &__title {
+
+    position: relative;
+    padding-top: 10px;
+    margin-bottom: 16px;
+
+    @media only screen and (max-width: $bp-sm){
+      padding-top: 16px; 
+    }
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100px;
+      height: 2px;
+      background-color: $accent-color;
+    }
+  }
+
+  &__bottom {
+    margin-top: 64px;
+    text-align: center;
+  }
+
+  //Size
+  &--sm {
+    padding: 80px 0;
+  }
+
+  //Decor
+  &--bg-dark {
+    background-color: $main-dark-color;
+    color: $medium-grey;
+  }
+
+  &--bg-grey {
+    background-color: $light-grey;
+  }
+}
