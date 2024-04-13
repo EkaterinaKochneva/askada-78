@@ -5,31 +5,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Кадровое агентство АСКАДА – подбор персонала в Санкт-Петербурге</title>
+    <link rel="stylesheet" href="assets/lib/swiper-bundle.min.css">
     <link rel="stylesheet" href="assets/css/style.min.css">
   </head>
   <body>
     <div class="wrapper">
       <header class="header">
         <div class="container">
-          <div class="header__inner"><a class="logo header__logo" href="/"> 
+          <div class="header__inner"><a class="logo header__logo smooth-scroll" href="#hero">
               <svg class="icon-svg logo__svg">
                 <use xlink:href="assets/img/svg-sprite/sprite.svg#logo"></use>
               </svg><span class="logo__text">Аскада</span></a>
             <div class="header__menu">
               <nav class="header__nav top-menu">
                 <ul class="top-menu__list">
-                  <li class="top-menu__item"><a class="top-menu__link" href="#">О компании</a></li>
-                  <li class="top-menu__item"><a class="top-menu__link" href="#">Преимущества</a></li>
-                  <li class="top-menu__item"><a class="top-menu__link" href="#">Контакты</a></li>
+                  <li class="top-menu__item"><a class="top-menu__link smooth-scroll" href="#section-spheres">Для кого</a></li>
+                  <li class="top-menu__item"><a class="top-menu__link smooth-scroll" href="#section-how-we-work">Как мы работаем</a></li>
+                  <li class="top-menu__item"><a class="top-menu__link smooth-scroll" href="#section-prices">Стоимость</a></li>
+                  <li class="top-menu__item"><a class="top-menu__link smooth-scroll" href="#section-contacts">Контакты</a></li>
                 </ul>
               </nav>
+              <div class="header__mobile-social"> 
+                <div class="social-block"><a class="social-block__link" href="#!" target="_blank">
+                    <svg class="svg-icon">
+                      <use xlink:href="assets/img/svg-sprite/sprite.svg#vk"></use>
+                    </svg></a><a class="social-block__link" href="#!" target="_blank">
+                    <svg class="svg-icon">
+                      <use xlink:href="assets/img/svg-sprite/sprite.svg#telegram"></use>
+                    </svg></a><a class="social-block__link" href="#!" target="_blank">
+                    <svg class="svg-icon">
+                      <use xlink:href="assets/img/svg-sprite/sprite.svg#whatsapp"></use>
+                    </svg></a><a class="social-block__link" href="#!" target="_blank">
+                    <svg class="svg-icon">
+                      <use xlink:href="assets/img/svg-sprite/sprite.svg#instagram"></use>
+                    </svg></a></div>
+              </div>
             </div>
             <button class="header__burger burger"><span>Меню</span></button>
           </div>
         </div>
       </header>
       <main class="main">
-        <section class="hero"> 
+        <section class="hero" id="hero">
           <div class="hero__img" style="background-image: url(assets/img/intro/intro.jpg);"></div>
           <div class="container"> 
             <div class="hero__inner">
@@ -49,7 +66,7 @@
         <section class="section"> 
           <div class="container"> 
             <div class="section__img-block img-block"> 
-              <div class="img-block__img"> <img src="https://via.placeholder.com/500x500/" alt=""></div>
+              <div class="img-block__img"> <img src="assets/img/intro/intro.jpg" alt=""></div>
               <div class="img-block__content"> 
                 <h2 class="section__title">Требуется персонал для бизнеса?</h2>
                 <div class="img-block__text">
@@ -70,7 +87,6 @@
         </section>
         <section class="section section--bg-dark section--sm">
           <div class="container"> 
-            <div class="h4 section__title text-center">Почему стоит обратиться к нам?</div>
             <div class="benefits"> 
               <div class="benefits__item"> 
                 <svg class="benefits__icon icon-svg">
@@ -99,7 +115,7 @@
             </div>
           </div>
         </section>
-        <section class="section section--bg-accent">
+        <section class="section section--bg-accent" id="section-spheres">
           <div class="container"> 
             <div class="h2 section__title why-we__title">Поможем в найме сотрудников в сферах:</div>
             <div class="spheres">
@@ -159,58 +175,99 @@
                   </ul>
                 </div>
               </div>
-              <div class="img-block__img"><img src="https://via.placeholder.com/500x500/" alt=""></div>
+              <div class="img-block__img"><img src="assets/img/intro/intro.jpg" alt=""></div>
             </div>
           </div>
         </section>
-        <section class="section">
+        <section class="section" id="section-how-we-work">
           <div class="container"> 
-            <div class="section__img-block img-block"> 
-              <div class="img-block__content"> 
-                <h2 class="section__title text-center">Как мы работаем</h2>
-                <div class="cards"> 
-                  <div class="cards__item"> 
-                    <div class="cards__icon"> 
-                      <svg class="icon-svg">
-                        <use xlink:href="assets/img/svg-sprite/sprite.svg#chek-list"></use>
-                      </svg>
-                    </div>
-                    <div class="cards__title">Первый контакт</div>
-                    <div class="cards__desc"> 
-                      <p>Мы начинаем работу с тщательного сбора информации о Ваших потребностях. <br> Узнаем требования к кандидатам, работаем над пониманием особенностей вакансии, осуществляем анализ рынка труда.</p>
+            <h2 class="section__title text-center">Как мы работаем</h2>
+            <div class="cards"> 
+              <div class="cards__item"> 
+                <div class="cards__number">01</div>
+                <div class="cards__icon"> 
+                  <svg class="icon-svg">
+                    <use xlink:href="assets/img/svg-sprite/sprite.svg#chek-list"></use>
+                  </svg>
+                </div>
+                <div class="cards__title">Первый контакт</div>
+                <div class="cards__desc"> 
+                  <p>Мы начинаем работу с тщательного сбора информации о Ваших потребностях. <br> Узнаем требования к кандидатам, работаем над пониманием особенностей вакансии, осуществляем анализ рынка труда.</p>
+                </div>
+              </div>
+              <div class="cards__item"> 
+                <div class="cards__number">02</div>
+                <div class="cards__icon"> 
+                  <svg class="icon-svg">
+                    <use xlink:href="assets/img/svg-sprite/sprite.svg#people-card"></use>
+                  </svg>
+                </div>
+                <div class="cards__title">Подготовительные работы</div>
+                <div class="cards__desc"> 
+                  <p>Приступаем к обработке информации, сбору откликов, анализу резюме потенциальных соискателей. Сопоставляем требования работодателей с профилеми кандидатов, чтобы направить наиболее подходящих кандидатов на собеседование.</p>
+                </div>
+              </div>
+              <div class="cards__item"> 
+                <div class="cards__number">03</div>
+                <div class="cards__icon"> 
+                  <svg class="icon-svg">
+                    <use xlink:href="assets/img/svg-sprite/sprite.svg#case"></use>
+                  </svg>
+                </div>
+                <div class="cards__title">Подбора персонала</div>
+                <div class="cards__desc"> 
+                  <p>Вы получаете первые результаты нашей работы – подобранные анкеты потенциальных кандидатов с развернутыми комментариями. Мы предоставляем всю необходимую информацию об опыте работы, навыках и профессиональных качествах соискателей.</p>
+                </div>
+              </div>
+              <div class="cards__item"> 
+                <div class="cards__number">04</div>
+                <div class="cards__icon"> 
+                  <svg class="icon-svg">
+                    <use xlink:href="assets/img/svg-sprite/sprite.svg#deal"></use>
+                  </svg>
+                </div>
+                <div class="cards__title">Финал</div>
+                <div class="cards__desc"> 
+                  <p>После завершения предыдущих этапов, наше кадровое агентство предлагает поддержку как работодателям, так и кандидатам. Мы обеспечиваем консультации, помощь в проведении собеседований и сопровождение на всех этапах трудоустройства.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section section--bg-grey" id="section-prices">
+          <div class="container"> 
+            <div class="prices">
+              <div class="prices__row"> 
+                <div class="prices__col"> 
+                  <div class="h3 section__title">Наши цены</div>
+                  <div class="prices__desc"> 
+                    <p>Стоимость услуг зависит от конкретной вакансии, и составляет определенный процент от годового дохода кандидата. На некоторые должности действует фиксированная цена. </p>
+                    <p><span class="text-accent">«АСКАДА»</span> экономит время и деньги своих клиентов, предотвращая ошибки при найме персонала и избегая дополнительных расходов на подбор и обучение сотрудников.</p>
+                  </div>
+                </div>
+                <div class="prices__col"> 
+                  <div class="prices__item">
+                    <div class="prices__item-bg" style="background-image: url(assets/img/intro/intro.jpg);"></div>
+                    <div class="prices__item-content">
+                      <div class="prices__item-title">ТОП-Специалисты </div>
+                      <div class="prices__item-price">
+                         от 10% <span>годового дохода </span></div>
                     </div>
                   </div>
-                  <div class="cards__item"> 
-                    <div class="cards__icon"> 
-                      <svg class="icon-svg">
-                        <use xlink:href="assets/img/svg-sprite/sprite.svg#people-card"></use>
-                      </svg>
-                    </div>
-                    <div class="cards__title">Подготовительные работы</div>
-                    <div class="cards__desc"> 
-                      <p>Приступаем к обработке информации, сбору откликов, анализу резюме потенциальных соискателей. Сопоставляем требования работодателей с профилеми кандидатов, чтобы направить наиболее подходящих кандидатов на собеседование.</p>
+                  <div class="prices__item">
+                    <div class="prices__item-bg" style="background-image: url(assets/img/intro/intro.jpg);"></div>
+                    <div class="prices__item-content">
+                      <div class="prices__item-title">Специалисты </div>
+                      <div class="prices__item-price">
+                         от 7% <span>годового дохода </span></div>
                     </div>
                   </div>
-                  <div class="cards__item"> 
-                    <div class="cards__icon"> 
-                      <svg class="icon-svg">
-                        <use xlink:href="assets/img/svg-sprite/sprite.svg#case"></use>
-                      </svg>
-                    </div>
-                    <div class="cards__title">Подбора персонала</div>
-                    <div class="cards__desc"> 
-                      <p>Вы получаете первые результаты нашей работы – подобранные анкеты потенциальных кандидатов с развернутыми комментариями. Мы предоставляем всю необходимую информацию об опыте работы, навыках и профессиональных качествах соискателей.</p>
-                    </div>
-                  </div>
-                  <div class="cards__item"> 
-                    <div class="cards__icon"> 
-                      <svg class="icon-svg">
-                        <use xlink:href="assets/img/svg-sprite/sprite.svg#deal"></use>
-                      </svg>
-                    </div>
-                    <div class="cards__title">Финал</div>
-                    <div class="cards__desc"> 
-                      <p>После завершения предыдущих этапов, наше кадровое агентство предлагает поддержку как работодателям, так и кандидатам. Мы обеспечиваем консультации, помощь в проведении собеседований и сопровождение на всех этапах трудоустройства.</p>
+                  <div class="prices__item">
+                    <div class="prices__item-bg" style="background-image: url(assets/img/intro/intro.jpg);"></div>
+                    <div class="prices__item-content">
+                      <div class="prices__item-title">Линейный персонал </div>
+                      <div class="prices__item-price">
+                         от 6% <span>годового дохода </span></div>
                     </div>
                   </div>
                 </div>
@@ -218,32 +275,96 @@
             </div>
           </div>
         </section>
-      </main>
-      <footer class="footer">Подвал</footer>
-      <div class="modal" id="modal-call" aria-hidden="true">
-        <div class="modal__overlay" tabindex="-1" data-modal-close="data-modal-close">
-          <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-call-title">
-            <header class="modal__header">
-              <div class="h4 modal__title" id="modal-call-title">Заказать звонок</div>
-              <button class="modal__close" aria-label="Close modal" data-modal-close="data-modal-close"></button>
-            </header>
-            <div class="modal__content" id="modal-call-content">
-              <p>Оставьте заявку, и мы перезвоним вам в ближайшее время.</p>
-              <form class="modal__form" action="mail.php" method="POST">
+        <section class="section">
+          <div class="container"> 
+            <h2 class="section__title text-center">Нам доверяют</h2>
+            <div class="partners"> 
+              <div class="partners__slider slider sliderPartners">
+                <div class="swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide partners__slide"><img src="/assets/img/logos/leroymerlin.jpg" alt="Леруа Мерлен"></div>
+                    <div class="swiper-slide partners__slide"><img src="/assets/img/logos/baltkam.jpg" alt="Балткам"></div>
+                    <div class="swiper-slide partners__slide"><img src="/assets/img/logos/nesco.jpg" alt="Неско"></div>
+                    <div class="swiper-slide partners__slide"><img src="/assets/img/logos/velle.jpg" alt="Velle"></div>
+                    <div class="swiper-slide partners__slide"><img src="/assets/img/logos/veraclinic.jpg" alt="Вера Клиник"></div>
+                    <div class="swiper-slide partners__slide"><img src="/assets/img/logos/mm.jpg" alt="ММ"></div>
+                  </div>
+                  <div class="swiper-pagination"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section section--bg-grey">
+          <div class="container"> 
+            <div class="section__img-block img-block"> 
+              <div class="img-block__img"> <img src="assets/img/intro/intro.jpg" alt=""></div>
+              <div class="img-block__content"> 
+                <h2 class="section__title">О нашем агентстве</h2>
+                <div class="img-block__text">
+                  <p>Наша компания, основанная в 2021 году, строит надежный фундамент для вашего бизнеса. Мы точно знаем, как найти тех сотрудников, которые подтолкнут ваш доход вверх, укрепят ваш бренд, и помогут вам масштабировать бизнес. </p>
+                  <p><span class="text-accent">«АСКАДА»</span> специализируется на подборе линейного персонала, а также квалифицированных специалистов верхнего и среднего уровня для вашей компании. Мы поможем избавиться от ненужных кадров, оптимизируя ваш штат.</p>
+                </div>
+                <div class="img-block__bottom"><a class="btn btn--md modal-link" href="!#" data-modal="modal-call">Связаться с нами</a></div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section section--bg section--lg" id="section-contacts" style="background-image: url(assets/img/intro/intro.jpg);">
+          <div class="container"> 
+            <div class="contacts">
+              <div class="contacts__content">
+                <h4 class="section__title">Остались вопросы?</h4>
+                <div class="contacts__desc">
+                  <p>Позвоните по телефону <a href="tel:+78126776706">8-812-677-67-06</a> и менеджер Александр проконсультирует вас по любым вопросам сотрудничества.</p>
+                  <p>Или напишите нам: <a href="mailto:askada.78@mail.ru">askada.78@mail.ru</a></p>
+                </div>
+              </div>
+              <form class="contacts__form" action="mail.php" method="POST">
+                <div class="contacts__subtitle">Или оставьте свое сообщение, и мы обязательно с вами свяжемся. </div>
                 <label class="input">
-                  <input class="input__native" type="text" name="user_name" placeholder="Имя" required="required"/><span class="input__label">Имя</span>
+                  <input class="input__native" type="text" name="user_name" placeholder="Имя" required="required"><span class="input__label">Имя</span>
                 </label>
                 <label class="input">
-                  <input class="input__native" type="tel" name="user_phone" placeholder="+7 (___) ___-__-__" required="required"/><span class="input__label">Телефон</span>
+                  <input class="input__native" type="tel" name="user_phone" placeholder="+7 (___) ___-__-__" required="required"><span class="input__label">Телефон</span>
                 </label>
-                <input class="btn modal__btn" type="submit" name="Оставить заявку" value="Оставить заявку"/>
+                <label class="input">
+                  <textarea class="input__native" name="user_text" placeholder="Сообщение"></textarea><span class="input__label">Сообщение</span>
+                </label>
+                <input class="btn contacts__btn" type="submit" value="Оставить сообщение">
               </form>
             </div>
           </div>
+        </section>
+      </main>
+      <footer class="footer"> 
+        <div class="container"> 
+          <div class="footer__inner"> 
+            <div class="footer__col"> <a class="logo footer__logo smooth-scroll" href="#hero">
+                <svg class="icon-svg logo__svg">
+                  <use xlink:href="assets/img/svg-sprite/sprite.svg#logo"></use>
+                </svg><span class="logo__text">Аскада</span></a></div>
+            <div class="footer__col"> </div>
+            <div class="footer__social social-block"><a class="social-block__link" href="#!" target="_blank">
+                <svg class="svg-icon">
+                  <use xlink:href="assets/img/svg-sprite/sprite.svg#vk"></use>
+                </svg></a><a class="social-block__link" href="#!" target="_blank">
+                <svg class="svg-icon">
+                  <use xlink:href="assets/img/svg-sprite/sprite.svg#telegram"></use>
+                </svg></a><a class="social-block__link" href="#!" target="_blank">
+                <svg class="svg-icon">
+                  <use xlink:href="assets/img/svg-sprite/sprite.svg#whatsapp"></use>
+                </svg></a><a class="social-block__link" href="#!" target="_blank">
+                <svg class="svg-icon">
+                  <use xlink:href="assets/img/svg-sprite/sprite.svg#instagram"></use>
+                </svg></a></div>
+          </div>
+          <div class="footer__bottom">© 2021-2024 «АСКАДА»</div>
         </div>
-      </div>
+      </footer>
     </div>
     <script src="assets/lib/micromodal.min.js"></script>
+    <script src="assets/lib/swiper-bundle.min.js"></script>
     <script src="assets/js/scripts.min.js"></script>
   </body>
 </html>

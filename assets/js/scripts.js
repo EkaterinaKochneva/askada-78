@@ -7,11 +7,22 @@ window.addEventListener('DOMContentLoaded', function () {
     var mainMenu = document.querySelector('.header__menu');
     var header = document.querySelector('.header');
     var burger = document.querySelector('.burger');
+    var links = mainMenu.querySelectorAll('.top-menu__link');
     burger.addEventListener('click', function () {
       header.classList.toggle('is-active');
       burger.classList.toggle('is-active');
       mainMenu.classList.toggle('is-active');
       body.classList.toggle('faded');
+    });
+    links.forEach(function (link) {
+      link.addEventListener('click', function () {
+        if (header.classList.contains('is-active')) {
+          header.classList.remove('is-active');
+          burger.classList.remove('is-active');
+          mainMenu.classList.remove('is-active');
+          body.classList.remove('faded');
+        }
+      });
     });
     var activateScrollHeader = function activateScrollHeader() {
       var scrollVal = 100;
@@ -45,4 +56,35 @@ window.addEventListener('DOMContentLoaded', function () {
     awaitCloseAnimation: true,
     disableFocus: true
   });
+  var swiper = new Swiper('.sliderPartners .swiper', {
+    slidesPerView: 2,
+    spaceBetween: 30,
+    loop: true,
+    autoplay: {
+      delay: 5000
+    },
+    breakpoints: {
+      991: {
+        slidesPerView: 4,
+        spaceBetween: 20
+      }
+    },
+    pagination: {
+      el: '.sliderPartners .swiper-pagination',
+      clickable: true
+    }
+  });
+  var smoothScroll = function smoothScroll(element) {
+    element.addEventListener('click', function (event) {
+      event.preventDefault();
+      var anchor = element.getAttribute('href');
+      var targetElement = document.querySelector(anchor);
+      targetElement.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+    });
+  };
+  var smoothScrollList = Array.from(document.querySelectorAll(".smooth-scroll"));
+  smoothScrollList.forEach(smoothScroll);
 });
