@@ -1,0 +1,20 @@
+section.section.section--bg.section--lg#section-contacts(style="background-image: url(assets/img/intro/intro.jpg);")
+  .container 
+      .contacts
+        .contacts__content
+          h4.section__title Остались вопросы?
+          .contacts__desc
+            p Позвоните по телефону <a href="tel:+78126776706">8-812-677-67-06</a> и менеджер Александр проконсультирует вас по любым вопросам сотрудничества.
+            p Или напишите нам: <a href="mailto:askada.78@mail.ru">askada.78@mail.ru</a>
+        form.contacts__form(action="mail.php", method="POST")
+          .contacts__subtitle Или оставьте свое сообщение, и мы обязательно с вами свяжемся. 
+          label.input
+            input.input__native(type="text", name="user_name", placeholder="Имя", required="required")
+            span.input__label Имя
+          label.input
+            input.input__native(type="tel", name="user_phone", placeholder="+7 (___) ___-__-__", required="required")
+            span.input__label Телефон
+          label.input
+            textarea.input__native( name="user_text", placeholder="Сообщение")
+            span.input__label Сообщение
+          input.btn.contacts__btn(type="submit" value="Оставить сообщение")

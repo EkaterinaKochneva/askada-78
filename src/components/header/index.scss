@@ -61,7 +61,15 @@
    }
   }
 
-  &.is-active {
+  &__mobile-social {
+    margin-top: 32px;
+
+    .social-block {
+      justify-content: center;
+    }
+    @media only screen and (min-width: $bp-lg + 1){
+       display: none;
+    }
 
   }
 }

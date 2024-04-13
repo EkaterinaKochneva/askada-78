@@ -1,59 +1,77 @@
 @import 'src/styles/global/vars';
 
 .cards {
-  margin-top: 80px;
+  max-width: 1000px;
+  margin: 80px auto 0;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 32px;
-
-  @media only screen and (max-width: $bp-lg){
-    grid-template-columns: repeat(2, 1fr);
-  }
+  grid-template-columns: repeat(2, 1fr);
+  gap: 48px;
 
   @media only screen and (max-width: $bp-sm){
     grid-template-columns: 1fr; 
+    gap: 32px;
   }
-
-
   &__item {
     position: relative;
-    padding: 16px;
-    border: 1px solid $dark-grey;
+    padding: 24px;
+    border: 2px solid $dark-grey;
     flex-direction: column;
+  }
+
+  &__number {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    font-family: "RobotoCondensed", sans-serif;
+    font-size: 120px;
+    line-height: 0.8;
+    font-weight: 700;
+    color: $secondary-dark-color;
+    opacity: 0.2;
+
+    @media only screen and (max-width: $bp-sm){
+      font-size: 90px; 
+    }
   }
 
   &__icon {
     position: absolute;
-    top: -20px;
-    left: -20px;
-    width: 60px;
-    height: 60px;
+    top: -40px;
+    left: 20px;
+    width: 80px;
+    height: 80px;
     background-color: $accent-color;
-    color: $main-white;
+    background-color: $main-white;
+    color: $accent-color;
     display: flex;
     align-items: center;
     justify-content: center;
 
     @media only screen and (max-width: $bp-sm){
-      left: -10px; 
+      width: 60px;
+      height: 60px;
+      top: -30px;  
     }
 
     svg {
-      width: 40px;
-      height: 40px;
+      width: 50px;
+      height: 50px;
+      @media only screen and (max-width: $bp-sm){
+        width: 40px;
+        height: 40px;
+      }
     }
   }
 
   &__title {
     font-size: 18px;
     font-weight: 600;
-    text-align: end;
     margin-bottom: 16px;
-    padding-left: 30px;
+    margin-top: 20px;
   }
 
   &__desc {
-    text-align: center;
     color: $secondary-text-color;
   }
 }

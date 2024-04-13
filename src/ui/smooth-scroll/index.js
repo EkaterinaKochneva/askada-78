@@ -1,13 +1,4 @@
-/*  добавить подключение в основной файл script.js
-    ../ui/accordion/index.js
-    Использовать как:
-    const smoothScrollList = Array.from(document.querySelectorAll(".smooth-scroll-js"));
-    smoothScrollList.forEach(smoothScroll);
-
- */
-
 const smoothScroll = (element) => {
-
   element.addEventListener('click', (event) => {
     event.preventDefault();
     let anchor = element.getAttribute('href');
@@ -17,5 +8,6 @@ const smoothScroll = (element) => {
       block: "start"
     })
   });
-
 };
+const smoothScrollList = Array.from(document.querySelectorAll(".smooth-scroll"));
+smoothScrollList.forEach(smoothScroll);

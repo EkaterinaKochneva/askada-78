@@ -1,0 +1,117 @@
+@import 'src/styles/global/vars';
+
+.prices {
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    gap: 48px 32px;
+
+    @media only screen and (max-width: $bp-md){
+      flex-wrap: wrap; 
+    }
+
+  }
+
+  &__col {
+    flex: 1 0 40%;
+
+    @media only screen and (max-width: $bp-md){
+      flex: 1 0 100%; 
+    }
+
+    &:last-child {
+      padding-right: 20px;
+
+      @media only screen and (max-width: $bp-md){
+        padding: 0 20px; 
+      }
+    }
+  }
+  &__desc {
+
+    color: $secondary-text-color;
+    p {
+      margin-bottom: 16px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  &__item {
+    position: relative;
+    padding: 24px;
+    margin-bottom: 16px;
+    color: $main-white;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      background-color: $main-dark-color;
+      opacity: .8;
+    }
+
+    &:first-child::before,
+    &:last-child::before {
+      content: "";
+      display: block;
+      position: absolute;      
+      z-index: 0;
+      width: 40%;
+      height: 70%;
+      border: 2px solid $accent-color;
+    }
+    &:first-child::before {
+      right: -20px;
+      top: -30px;
+    }
+    &:last-child::before {
+      left: -20px;
+      bottom: -30px;
+    }
+  }
+  &__item-bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    filter: blur(0.5px) brightness(0.7);
+  }
+  &__item-content {
+    position: relative;
+    z-index: 2;
+  }
+
+  &__item-title {
+    font-size: 24px;
+    margin-bottom: 8px;
+
+    @media only screen and (max-width: $bp-md){
+      font-size: 20px; 
+    }
+  }
+
+  &__item-price {
+    font-size: 20px;
+
+    @media only screen and (max-width: $bp-md){
+      font-size: 18px; 
+    }
+
+    span {
+      color: $secondary-dark-color;
+      font-size: 16px;
+
+      @media only screen and (max-width: $bp-md){
+        font-size: 14px; 
+      }
+    }
+  }
+}

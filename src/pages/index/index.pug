@@ -4,7 +4,7 @@ block title
   title Кадровое агентство АСКАДА – подбор персонала в Санкт-Петербурге
 
 block beforeWorkarea
-  +header()
+  include /components/header/index.pug
 
 block workarea
   include /components/hero/index.pug
@@ -13,6 +13,10 @@ block workarea
   include /components/spheres/index.pug
   include /components/section-support/index.pug
   include /components/section-how-we-work/index.pug
+  include /components/section-prices/index.pug
+  include /components/section-partners/index.pug
+  include /components/section-about/index.pug
+  include /components/section-contacts/index.pug
 
 block afterWorkarea
-  +footer()
+  include /components/footer/index.pug

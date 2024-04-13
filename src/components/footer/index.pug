@@ -1,14 +1,23 @@
-mixin footer(props = { class: [], attrs: {} })
-  -
-    let classes = ['footer'];
-    let attrs = props.attrs ? props.attrs : {};
-
-    if (Array.isArray(props.class)) {
-        props.class.forEach((key) => {
-        classes.push(key);
-        })
-    }
-
-  footer(class= classes)&attributes(attrs) Подвал
-
-  include /ui/modal/index
+footer.footer 
+  .container 
+    .footer__inner 
+      .footer__col 
+        a(href="#hero").logo.footer__logo.smooth-scroll
+          svg.icon-svg.logo__svg
+            use(xlink:href="assets/img/svg-sprite/sprite.svg#logo")
+          span.logo__text Аскада
+      .footer__col 
+      .footer__social.social-block
+        a.social-block__link(href="#!", target="_blank")
+          svg.svg-icon
+            use(xlink:href="assets/img/svg-sprite/sprite.svg#vk")
+        a.social-block__link(href="#!", target="_blank")
+          svg.svg-icon
+            use(xlink:href="assets/img/svg-sprite/sprite.svg#telegram")
+        a.social-block__link(href="#!", target="_blank")
+          svg.svg-icon
+            use(xlink:href="assets/img/svg-sprite/sprite.svg#whatsapp")
+        a.social-block__link(href="#!", target="_blank")
+          svg.svg-icon
+            use(xlink:href="assets/img/svg-sprite/sprite.svg#instagram")
+    .footer__bottom © 2021-2024 «АСКАДА»

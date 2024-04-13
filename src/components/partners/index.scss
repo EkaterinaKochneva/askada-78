@@ -1,0 +1,34 @@
+@import 'src/styles/global/vars';
+
+.partners {
+  margin-top: 48px;
+
+  @media only screen and (max-width: $bp-sm){
+    margin-top: 24px; 
+  }
+
+  &__slide {
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+  .swiper {
+    width: 100%;
+  }
+  .swiper-wrapper {
+    padding-bottom: 32px;
+
+  }
+  .swiper-pagination {
+    bottom: 0;
+  }
+  .slider .swiper-pagination-bullet {
+    background-color: $secondary-dark-color;
+  }
+  .slider .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background-color: $accent-color;
+  } 
+}

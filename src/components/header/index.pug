@@ -1,31 +1,35 @@
-mixin header(props = { class: [], attrs: {} })
-  -
-    let classes = ['header'];
-    let attrs = props.attrs ? props.attrs : {};
+header.header
+  .container
+    .header__inner
+      a(href="#hero").logo.header__logo.smooth-scroll
+        svg.icon-svg.logo__svg
+          use(xlink:href="assets/img/svg-sprite/sprite.svg#logo")
+        span.logo__text Аскада
 
-    if (Array.isArray(props.class)) {
-      props.class.forEach((key) => {
-        classes.push(key);
-      })
-    }
-
-  header(class= classes)&attributes(attrs)
-    .container
-      .header__inner
-        a(href="/").logo.header__logo 
-          svg.icon-svg.logo__svg
-            use(xlink:href="assets/img/svg-sprite/sprite.svg#logo")
-          span.logo__text Аскада
-
-        .header__menu
-          nav.header__nav.top-menu
-            ul.top-menu__list
-              li.top-menu__item
-                a(href="#").top-menu__link О компании
-              li.top-menu__item
-                a(href="#").top-menu__link Преимущества
-              li.top-menu__item
-                a(href="#").top-menu__link Контакты
-        button.header__burger.burger
-          span Меню
-      
+      .header__menu
+        nav.header__nav.top-menu
+          ul.top-menu__list
+            li.top-menu__item
+              a(href="#section-spheres").top-menu__link.smooth-scroll Для кого
+            li.top-menu__item
+              a(href="#section-how-we-work").top-menu__link.smooth-scroll Как мы работаем
+            li.top-menu__item
+              a(href="#section-prices").top-menu__link.smooth-scroll Стоимость
+            li.top-menu__item
+              a(href="#section-contacts").top-menu__link.smooth-scroll Контакты
+        .header__mobile-social 
+          .social-block
+            a.social-block__link(href="#!", target="_blank")
+              svg.svg-icon
+                use(xlink:href="assets/img/svg-sprite/sprite.svg#vk")
+            a.social-block__link(href="#!", target="_blank")
+              svg.svg-icon
+                use(xlink:href="assets/img/svg-sprite/sprite.svg#telegram")
+            a.social-block__link(href="#!", target="_blank")
+              svg.svg-icon
+                use(xlink:href="assets/img/svg-sprite/sprite.svg#whatsapp")
+            a.social-block__link(href="#!", target="_blank")
+              svg.svg-icon
+                use(xlink:href="assets/img/svg-sprite/sprite.svg#instagram")
+      button.header__burger.burger
+        span Меню

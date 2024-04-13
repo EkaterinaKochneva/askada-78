@@ -1,5 +1,19 @@
 @import 'src/styles/global/vars';
 
-.footer {
-  
+.footer { 
+  color: $main-white;
+  background-color: $main-dark-color;
+  padding: 24px 0;
+
+  &__inner {
+    display: flex;
+    gap: 16px;
+    justify-content: space-between;
+  }
+  &__bottom {
+    margin-top: 16px;
+    font-size: 14px;
+    color: $secondary-dark-color;
+    text-align: center;
+  }
 }

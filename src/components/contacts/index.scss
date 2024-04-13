@@ -1,0 +1,56 @@
+@import 'src/styles/global/vars';
+
+.contacts {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  gap: 48px;
+
+  @media only screen and (max-width: $bp-md){
+    flex-wrap: wrap; 
+  }
+
+
+  &__content {
+    color: $main-white;
+  }
+
+  &__desc {
+    font-size: 18px;
+    p {
+      margin-bottom: 16px;
+    }
+
+    a {
+      font-weight: 500;
+      color: $accent-color;
+      white-space: nowrap;
+
+      &:hover {
+        color: $accent-color-hover;
+      }
+    }
+  }
+
+  &__form {
+    width: 45%;
+    flex-shrink: 0;
+    background-color: $main-white;
+    padding: 32px 24px;
+
+    @media only screen and (max-width: $bp-md){
+      width: 100%; 
+    }
+  }
+
+  &__subtitle {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 24px;
+  }
+
+  &__btn {
+    margin-top: 16px;
+    width: 100%;
+  }
+}
