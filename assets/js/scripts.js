@@ -87,4 +87,29 @@ window.addEventListener('DOMContentLoaded', function () {
   };
   var smoothScrollList = Array.from(document.querySelectorAll(".smooth-scroll"));
   smoothScrollList.forEach(smoothScroll);
+  function phoneMask(elements) {
+    if (elements.length !== 0) {
+      var maskOptions = {
+        mask: '+{7} (000) 000-00-00'
+      };
+      elements.forEach(function (element) {
+        var mask = IMask(element, maskOptions);
+      });
+    }
+  }
+  var inputPhoneList = Array.from(document.querySelectorAll('input[type="tel"]'));
+  phoneMask(inputPhoneList);
+  var inputs = document.querySelectorAll('.input');
+  if (inputs.length > 0) {
+    inputs.forEach(function (input) {
+      var inputNative = input.querySelector('.input__native');
+      inputNative.addEventListener('input', function () {
+        if (this.value) {
+          input.classList.add('is-value');
+        } else if (input.classList.contains('is-value')) {
+          input.classList.remove('is-value');
+        }
+      });
+    });
+  }
 });
