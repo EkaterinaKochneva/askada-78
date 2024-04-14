@@ -7,10 +7,10 @@ MicroModal.init({
   onShow: function(modal, element, event) {
       event.preventDefault();
       event.stopPropagation();
-      document.querySelector('body').classList.add('faded');
+      document.querySelector('body').classList.add('hidden');
   },
   onClose: function() {
-    document.querySelector('body').classList.remove('faded');
+    document.querySelector('body').classList.remove('hidden');
   },
   openTrigger: 'data-modal',
   closeTrigger: 'data-modal-close',

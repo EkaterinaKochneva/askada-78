@@ -16,7 +16,6 @@
     animation: mmslideOut .3s cubic-bezier(0, 0, .2, 1), mmfadeOut .3s cubic-bezier(0.0, 0.0, 0.2, 1);
   }
   
-
   &__overlay {
     position: fixed;
     inset: 0;
@@ -25,7 +24,24 @@
     justify-content: center;
     align-items: center;
     padding: 0 20px;
+
+    &::before {
+      position: fixed;
+      height: 100%;
+      left: 0;
+      top: 0;
+      width: 100%;
+      z-index: -1;
+      content: "";
+      background-color: $main-dark-color;
+      opacity: 0;
+      transition: all .2s ease;
+    }
   }
+
+  &.is-open &__overlay::before {
+    opacity: 0.8;
+  } 
 
   &__container {
     position: relative;
