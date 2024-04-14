@@ -28,6 +28,13 @@
 
   }
 
+  &.is-value {
+    
+    .input__label {
+      transform: translateY(-25px);
+    }
+  }
+
   &__label {
     position: absolute;
     top: 18px;

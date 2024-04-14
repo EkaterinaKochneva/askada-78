@@ -19,17 +19,6 @@ header.header
               a(href="#section-contacts").top-menu__link.smooth-scroll Контакты
         .header__mobile-social 
           .social-block
-            a.social-block__link(href="#!", target="_blank")
-              svg.svg-icon
-                use(xlink:href="assets/img/svg-sprite/sprite.svg#vk")
-            a.social-block__link(href="#!", target="_blank")
-              svg.svg-icon
-                use(xlink:href="assets/img/svg-sprite/sprite.svg#telegram")
-            a.social-block__link(href="#!", target="_blank")
-              svg.svg-icon
-                use(xlink:href="assets/img/svg-sprite/sprite.svg#whatsapp")
-            a.social-block__link(href="#!", target="_blank")
-              svg.svg-icon
-                use(xlink:href="assets/img/svg-sprite/sprite.svg#instagram")
+            include /components/socials-block/index.pug
       button.header__burger.burger
         span Меню

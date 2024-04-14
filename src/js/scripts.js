@@ -6,5 +6,7 @@ mobileMenu();
 //=include ../ui/modal/index.js
 //=include ../components/partners/index.js
 //=include ../ui/smooth-scroll/index.js
+//=include ../ui/phone-mask/index.js
+//=include ../ui/input/index.js
 
 });
